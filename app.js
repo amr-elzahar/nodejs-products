@@ -11,7 +11,12 @@ app.set("views", "views");
 
 app.get("/", productsRoutes);
 app.get("/products", productsRoutes);
+app.get("/products/:id", productsRoutes);
 app.get("/add-product", productsRoutes);
+app.get("/edit-product/:id", productsRoutes);
+
 app.post("/add-product", productsRoutes);
+app.post("/delete-product", productsRoutes);
+app.post("/edit-product", productsRoutes);
 
 module.exports = app;

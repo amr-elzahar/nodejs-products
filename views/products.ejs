@@ -10,7 +10,6 @@
     <% if(products.length === 0) { %>
     <h1>No products yet!</h1>
     <% } else { %>
-
     <div class="cards-container">
       <% products.map(product => { %>
       <div class="card">
@@ -18,13 +17,22 @@
           <h2 class="card-title"><%= product.title%></h2>
         </div>
         <div class="card-body">
-          <p class="card-price">$<%= product.price%></p>
+          <p class="card-price">$ <%= product.price%></p>
           <p class="card-description"><%= product.describtion%></p>
+          <a class="card-btn card-anchor" href="/products/<%= product._id%>"
+            >Details</a
+          >
+          <a class="card-btn card-edit" href="/edit-product/<%= product._id%>"
+            >Edit</a
+          >
+          <form class="form-delete" action="/delete-product" method="POST">
+            <input type="hidden" value="<%= product._id %>" name="id" />
+            <button class="card-btn card-delete" type="submit">Delete</button>
+          </form>
         </div>
       </div>
       <% }); %>
     </div>
-
     <% } %>
   </body>
 </html>

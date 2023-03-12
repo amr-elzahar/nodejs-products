@@ -2,11 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Set styles for the navigation bar */
 nav {
   background-color: #333;
   padding: 15px 20px;
 }
+
 nav ul {
   display: flex;
   justify-content: flex-start;
@@ -16,7 +16,6 @@ nav li {
   list-style: none;
 }
 
-/* Set styles for the links */
 nav a {
   color: white;
   text-align: center;
@@ -26,7 +25,6 @@ nav a {
   transition: all 0.3s;
 }
 
-/* Change the link color on hover */
 nav a:hover {
   background-color: #ddd;
   color: black;
@@ -73,13 +71,20 @@ nav a:hover {
   background-color: #0056b3;
 }
 
-/* Card */
-
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 35px;
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .card {
   background-color: #f5f5f5;
   width: 300px;
@@ -103,15 +108,60 @@ nav a:hover {
 }
 
 .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  flex: 1;
 }
 
 .card-price {
   font-weight: bold;
   font-size: 1.2rem;
+  margin: 5px 0;
 }
 
 .card-description {
   line-height: 1.3;
+  margin: 5px 0;
+}
+
+.card-btn {
+  display: block;
+  width: 150px;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-anchor {
+  background-color: #007bff;
+}
+
+.card-anchor:hover {
+  background-color: #0056b3;
+}
+
+.card-delete {
+  background-color: #d33;
+  width: 190px;
+}
+.card-delete:hover {
+  background-color: rgb(88, 34, 34);
+}
+.card-edit {
+  background-color: rgb(67, 161, 43);
+}
+.card-edit:hover {
+  background-color: rgb(46, 110, 34);
+}
+
+.form-delete {
+  margin: 0;
 }
