@@ -19,4 +19,5 @@ app.post("/add-product", productsRoutes);
 app.post("/delete-product", productsRoutes);
 app.post("/edit-product", productsRoutes);
 
+app.use((req, res) => res.status(404).send("<h1>Page Not found!</h1>"));
 module.exports = app;
